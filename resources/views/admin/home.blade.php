@@ -1,5 +1,9 @@
-@extends('layouts.app')
+@extends('layouts.dashboard')
 
 @section('content')
-    <h1>Benvenuto nell'area protetta</h1>
+    <section>
+        <div class="container">
+            <h1>Benvenuto {{ $user->name }} nell'area protetta</h1>
+        </div>
+    </section>
 @endsection
