@@ -12,7 +12,8 @@ class HomeController extends Controller
         $user = Auth::user();
 
         $data = [
-            'user' => $user
+            'user' => $user,
+            'userInfo' => $user->userInfo
         ];
 
         return view('admin.home', $data);

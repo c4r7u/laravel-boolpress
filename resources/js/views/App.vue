@@ -1,9 +1,20 @@
 <template>
-    <h1>ciao sono vuejs</h1>
+    <div>
+        <Header />
+
+        <main>
+            <router-view></router-view>
+        </main>
+    </div>
 </template>
 
 <script>
+import Header from '../components/Header.vue';
+
 export default {
-    name: 'app'
+    name: 'App',
+    components: {
+        Header
+    }
 }
 </script>

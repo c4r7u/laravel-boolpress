@@ -17,3 +17,14 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+// Posts Api endpints
+Route::get('/posts', 'Api\PostController@index');
+Route::get('/posts/{slug}', 'Api\PostController@show');
+
+// Tags Api endpints
+Route::get('/tags', 'Api\TagController@index');
+Route::get('/tags/{slug}', 'Api\TagController@show');
+
+// Lead Api endpints
+Route::post('/leads/store', 'Api\LeadController@store');
